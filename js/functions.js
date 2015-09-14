@@ -83,15 +83,8 @@ var function_loop_mouse_enter = function(){
 	};
 };
 
-var div = document.id('gallery');
-var span = document.id('gallery');
-
-div.addEvent("touchstart", function (event) {
-    event.preventDefault(); // to avoid scrolling
-    span.innerHTML = event.page.x;
-});
-div.addEvent("touchend", function (event) {
-    span.innerHTML = event.changedTouches[0].pageX;
-});
-
-alert("touch4")
+	game_list_item[3].addEventListener('touchstart', function(event){
+		alert("hi");
+     		alert(event.page.x);
+		});
+alert('newtouch1');
