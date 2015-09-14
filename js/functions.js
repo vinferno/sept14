@@ -6,7 +6,7 @@ function add_game(name_value){
    var new_li = document.createElement('li');
    new_li.innerText = name_value; 
 	game_unordered_list.appendChild(new_li);
-	new_li.innerText = name_value; 
+	new_li.innerText = name_value.toUpperCase(); 
 	new_li.classList.toggle("game_list_item");
 };
 
