@@ -84,5 +84,5 @@ var function_loop_mouse_enter = function(){
 };
 
 	game_list_item[3].addEventListener('touchstart', function(){
-     		alert(page.x);
+     		alert('this is new touch');
 		});
