@@ -83,7 +83,11 @@ var function_loop_mouse_enter = function(){
 	};
 };
 
-	game_list_item[3].addEventListener('touchstart', function(event){
-     		alert(event.page.x);
-		});
-alert('newtouch2');
+var div = document.getElementsByTagName('li')[3];
+
+
+div.addEvent("touchstart", function (event) {
+    event.preventDefault(); // to avoid scrolling
+    alert(event.page.x);
+});
+alert('newtouch3');
