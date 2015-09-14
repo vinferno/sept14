@@ -73,12 +73,7 @@ var function_loop_mouse_enter = function(){
 		});
 		game_list_item[i].addEventListener('touchend', function(){
 			alert(event.page.x);
-			if (start_swipe + threshold< end_swipe ){
-				alert("swipe right");				
-			}
-			if (start_swipe > end_swipe + threshold){
-				alert('swipe left')
-			}
+		
 		});
 		game_list_item[i].addEventListener('mouseenter', function(event){
 		   	for (var i = 0;i < games.length; i++) {
