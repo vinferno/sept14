@@ -28,7 +28,7 @@ function make_minus(target){
 	if (target.parentNode == game_unordered_list){
 		if (target.children.length == 0){
 			if (target != target_parent.children[0]){
-			var new_minus = document.createElement('button');
+			var new_minus = document.createElement('div');
 		  	target.appendChild(new_minus);
 			new_minus.innerText = "-"; 
 			new_minus.classList.toggle("minus");
@@ -69,10 +69,17 @@ var function_loop_mouse_enter = function(){
 			}
 		});
 		game_list_item[i].addEventListener('touchstart', function(){
+<<<<<<< HEAD
 			start_swipe = event.clientX;
 		});
 		game_list_item[i].addEventListener('touchend', function(){
 			end_swipe = event.clientX;
+=======
+			alert(event.page.x);
+		});
+		game_list_item[i].addEventListener('touchend', function(){
+			alert(event.page.x);
+>>>>>>> master
 			if (start_swipe + threshold< end_swipe ){
 				alert("swipe right");				
 			}
