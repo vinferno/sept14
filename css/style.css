@@ -80,10 +80,13 @@ li:hover {
   border-radius: 5px;
 }
 .minus{
+  text-align: center;
   float:left;
   height: 100%;
   width: 60px;
   font-size: 130%;
+  background-color: #b6b6b6;
+  border: 1px solid black;
 }
 
 @media screen and (max-width: 1000px){
@@ -97,11 +100,11 @@ li:hover {
     line-height: 100px;
   }
   .open {
-    height: 200px;
+    height: 225px;
   }
   .open button {
-  height: 40px;
-  padding: 15px 25px;
+  height: 50px;
+  padding: 20px 50px;
   font-size: 20px;
   line-height: 10px;
   border-radius: 10px;
@@ -117,11 +120,9 @@ p{
   padding: 15px;
   width: 400px;
   height:15px;
-  
 }
 
 
+
 }
-
-
 
