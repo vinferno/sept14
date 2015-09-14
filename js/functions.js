@@ -83,6 +83,6 @@ var function_loop_mouse_enter = function(){
 	};
 };
 
-	game_list_item[0].addEventListener('touchstart', function(){
-     		alert('this is a touch start');
+	game_list_item[3].addEventListener('touchstart', function(){
+     		alert(touchItem.pageX);
 		});
