@@ -68,12 +68,13 @@ var function_loop_mouse_enter = function(){
 				alert('swipe left')
 			}
 		});
-		game_list_item[i].addEventListener('touchstart', function(){
-			alert(event.page.x);
+		game_list_item[i].addEvent("touchstart", function (event) {
+    		event.preventDefault(); // to avoid scrolling
+    		alert(event.page.x);
 		});
-		game_list_item[i].addEventListener('touchend', function(){
-			alert(event.page.x);
-		
+		game_list_item[i].addEvent("touchend", function (event) {
+    		 // to avoid scrolling
+    		alert(event.page.x);
 		});
 		game_list_item[i].addEventListener('mouseenter', function(event){
 		   	for (var i = 0;i < games.length; i++) {
