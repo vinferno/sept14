@@ -45,7 +45,7 @@ function detect_swipe_events(element_to_detect) {
     var swipe_x_difference;
     var swipe_y_difference;
 
-      swipe_event_tyoe = function () {
+      swipe_event_type = function () {
         swipe_x_difference = Math.abs(swipe_end_x - swipe_start_x);
         swipe_y_difference = Math.abs(swipe_end_y - swipe_start_y);
         var event_type = Math.max(swipe_x_difference, swipe_y_difference) > swipe_move_threshold ?
@@ -72,7 +72,7 @@ function detect_swipe_events(element_to_detect) {
               return swipe_event(e, 'swipe_double_tap');
             }
             swipe_active = false;
-            return swipe_event(e, swipe_event_tyoe());
+            return swipe_event(e, swipe_event_type());
           },
           touchcancel: function (e) {
             swipe_active = false;
@@ -111,7 +111,7 @@ function detect_swipe_events(element_to_detect) {
               return swipe_event(e, 'swipe_double_tap');
             }
             swipe_active = false;
-            return swipe_event(e, swipe_event_tyoe());
+            return swipe_event(e, swipe_event_type());
           }
         }
       };

@@ -51,12 +51,27 @@ var add_minus_listener = function(){
     }
 }
 
+var start_swipe = 0;
+var end_swipe = 0;
+var threshold = 100;
 var function_loop_mouse_enter = function(){
 	for (var i= 0;i<game_list_item.length;i++){
-		game_list_item[i].addEventListener('mouseenter', function(){
+		game_list_item[i].addEventListener('mousedown', function(){
+			start_swipe = event.clientX;
+		});
+		game_list_item[i].addEventListener('mouseup', function(){
+			end_swipe = event.clientX;
+			if (start_swipe + threshold< end_swipe ){
+				alert("swipe right");				
+			}
+			if (start_swipe > end_swipe + threshold){
+				alert('swipe left')
+			}
+		});
+		game_list_item[i].addEventListener('mouseenter', function(event){
 		   	for (var i = 0;i < games.length; i++) {
-		   			//alert(games[i]);
-			   	if (games[i].children.length>0){
+		   			//alert(event.clientX);
+			   	if (games[i].children.length===1){
 			   		games[i].removeChild(games[i].children[0]);
 				   	
 				};
@@ -64,3 +79,4 @@ var function_loop_mouse_enter = function(){
 		});
 	};
 };
+
