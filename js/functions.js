@@ -69,17 +69,10 @@ var function_loop_mouse_enter = function(){
 			}
 		});
 		game_list_item[i].addEventListener('touchstart', function(){
-<<<<<<< HEAD
-			start_swipe = event.clientX;
-		});
-		game_list_item[i].addEventListener('touchend', function(){
-			end_swipe = event.clientX;
-=======
 			alert(event.page.x);
 		});
 		game_list_item[i].addEventListener('touchend', function(){
 			alert(event.page.x);
->>>>>>> master
 			if (start_swipe + threshold< end_swipe ){
 				alert("swipe right");				
 			}
