@@ -56,9 +56,11 @@ var end_swipe = 0;
 var threshold = 100;
 var function_loop_mouse_enter = function(){
 	for (var i= 0;i<game_list_item.length;i++){
+
 		game_list_item[i].addEventListener('mousedown', function(){
 			start_swipe = event.clientX;
 		});
+
 		game_list_item[i].addEventListener('mouseup', function(){
 			end_swipe = event.clientX;
 			if (start_swipe + threshold< end_swipe ){
@@ -68,14 +70,7 @@ var function_loop_mouse_enter = function(){
 				alert('swipe left')
 			}
 		});
-		game_list_item[i].addEvent("touchstart", function (event) {
-    		event.preventDefault(); // to avoid scrolling
-    		alert(event.page.x);
-		});
-		game_list_item[i].addEvent("touchend", function (event) {
-    		 // to avoid scrolling
-    		alert(event.page.x);
-		});
+	
 		game_list_item[i].addEventListener('mouseenter', function(event){
 		   	for (var i = 0;i < games.length; i++) {
 		   			//alert(event.clientX);
@@ -88,3 +83,6 @@ var function_loop_mouse_enter = function(){
 	};
 };
 
+	game_list_item[0].addEventListener('touchstart', function(){
+     		alert('this is a touch start');
+		});
