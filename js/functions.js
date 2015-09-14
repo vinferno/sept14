@@ -88,7 +88,9 @@ var function_loop_mouse_enter = function(){
 
 	});  
 	game_list_item[3].addEventListener('touchend', function(event){     	
-     			end_swipe = event.touches[0].pageX;
+     			end_swipe = event.changedTouches[0].pageX;
+     			alert(start_swipe);
+     			alert(end_swipe);
 			if (start_swipe + threshold< end_swipe ){
 				alert("swipe right");				
 			}
@@ -96,4 +98,4 @@ var function_loop_mouse_enter = function(){
 				alert('swipe left')
 			}
 		});
-alert('newtouch3');
+alert('newtouch5');
