@@ -83,11 +83,15 @@ var function_loop_mouse_enter = function(){
 	};
 };
 
-var div = document.getElementsByTagName('li')[3];
-
+var div = document.id('gallery');
+var span = document.id('gallery');
 
 div.addEvent("touchstart", function (event) {
     event.preventDefault(); // to avoid scrolling
-    alert(event.page.x);
+    span.innerHTML = event.page.x;
 });
-alert('newtouch3');
+div.addEvent("touchend", function (event) {
+    span.innerHTML = event.changedTouches[0].pageX;
+});
+
+alert("touch4")
