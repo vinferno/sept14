@@ -82,9 +82,18 @@ var function_loop_mouse_enter = function(){
 		});
 	};
 };
+	
+	game_list_item[3].addEventListener('touchstart', function(event){ 
+		start_swipe = event.touches[0].pageX;
 
-	game_list_item[3].addEventListener('touchstart', function(event){
-		alert("hi");
-     		alert(event.touches[0].pageX);
+	});  
+	game_list_item[3].addEventListener('touchend', function(event){     	
+     			end_swipe = event.touches[0].pageX;
+			if (start_swipe + threshold< end_swipe ){
+				alert("swipe right");				
+			}
+			if (start_swipe > end_swipe + threshold){
+				alert('swipe left')
+			}
 		});
-alert('newtouch2');
+alert('newtouch3');
