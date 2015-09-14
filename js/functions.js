@@ -54,7 +54,7 @@ var add_minus_listener = function(){
 var start_swipe = 0;
 var end_swipe = 0;
 var threshold = 100;
-var y_threshold = 10;
+var y_threshold = 40;
 
 var function_loop_mouse_enter = function(){
 	for (var i= 0;i<game_list_item.length;i++){
