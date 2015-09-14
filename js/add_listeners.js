@@ -44,3 +44,6 @@ game_unordered_list.addEventListener('mouseleave', function(){
     	game_list_item[1].classList.add("closed");
     	game_list_item[1].classList.remove("open");
 });
+
+
+add_mobile_event_listners('li');
