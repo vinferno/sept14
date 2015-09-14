@@ -107,17 +107,20 @@ li:hover {
   border-radius: 10px;
   border: 1px solid black;
   }
-}
+
 p{
   margin:0;
   padding:0;
 }
 #name_input_box{
   margin:0 0 0 40px;
-  padding:15px;
+  padding: 15px;
   width: 400px;
   height:15px;
-  padding-bottom: 10px;
+  
+}
+
+
 }
 
 
