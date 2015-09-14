@@ -107,7 +107,7 @@ li:hover {
   border-radius: 10px;
   border: 1px solid black;
   }
-}
+
 p{
   margin:0;
   padding:0;
@@ -118,6 +118,9 @@ p{
   width: 400px;
   height:15px;
   line-height: 1;
+}
+
+
 }
 
 
