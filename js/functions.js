@@ -1,4 +1,3 @@
-
 function add_game(name_value){
    var new_game = name_value;
    if (new_game===''|| new_game===null){
