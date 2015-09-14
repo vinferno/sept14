@@ -114,11 +114,9 @@ p{
 }
 #name_input_box{
   margin:0 0 0 40px;
-  padding:15px;
+  padding: 15px;
   width: 400px;
   height:15px;
-  padding-bottom: 10px;
-  line-height: normal;
 }
 
 
