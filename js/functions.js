@@ -126,7 +126,7 @@ game_list_item[3].addEventListener('touchend', function(event){
      		}       			
 			if (start_swipe + threshold< end_swipe ){
 				alert("swipe right");	
-				this.parentNode.remove(this);			
+				alert(this);			
 			}
 			if (start_swipe > end_swipe + threshold){
 				alert('swipe left')
