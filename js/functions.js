@@ -35,7 +35,8 @@ function get_index(target){
 };
 
 function make_minus(target){
-	alert("make_minus(this)")
+	alert("make_minus(this)");
+	alert(this);
 	function_loop_mouse_enter();
 	if (target.parentNode == game_unordered_list){
 		if (target.children.length == 0){
@@ -135,4 +136,4 @@ game_list_item[3].addEventListener('touchend', function(event){
 			}
 });
 
-alert('MakeMinusthis2');
+alert('MakeMinusthis3');
