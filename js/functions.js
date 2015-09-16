@@ -133,4 +133,4 @@ game_list_item[3].addEventListener('touchend', function(event){
 			}
 });
 
-alert('crookedfingers1');
+alert('swipedelete1');
