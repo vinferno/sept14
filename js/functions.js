@@ -1,8 +1,19 @@
 function add_game(name_value){
-   var new_game = name_value;
+   var new_game = name_value.toUpperCase();
+
+   new_game = new_game.replace(/^\s+/, '').replace(/\s+$/, '');
+
    if (new_game===''|| new_game===null){
    	return ;
    }
+
+   for (var i = 0; i < games.length; i++) {   	
+   		if (new_game === games[i].innerText){
+   		alert("you already have this game");
+   		return;
+   	}
+   }
+
    var new_li = document.createElement('li');
    new_li.innerText = name_value; 
 	game_unordered_list.appendChild(new_li);
@@ -49,7 +60,7 @@ var add_minus_listener = function(){
     for(var i=0;i<class_minus.length;i++){
         class_minus[i].addEventListener('click', function_minus, false);
     }
-}
+};
 
 var start_swipe = 0;
 var end_swipe = 0;
@@ -58,12 +69,11 @@ var y_threshold = 50;
 
 var function_loop_mouse_enter = function(){
 	for (var i= 0;i<game_list_item.length;i++){
-
 		game_list_item[i].addEventListener('mousedown', function(){
-			start_swipe = event.clientX;
-		});
+		start_swipe = event.clientX;
+});
 
-		game_list_item[i].addEventListener('mouseup', function(){
+game_list_item[i].addEventListener('mouseup', function(){
 			end_swipe = event.clientX;
 			if (start_swipe + threshold < end_swipe ){
 				alert("swipe right");				
@@ -71,9 +81,9 @@ var function_loop_mouse_enter = function(){
 			if (start_swipe > end_swipe + threshold){
 				alert('swipe left')
 			}
-		});
+});
 	
-		game_list_item[i].addEventListener('mouseenter', function(event){
+game_list_item[i].addEventListener('mouseenter', function(event){
 		   	for (var i = 0;i < games.length; i++) {
 		   			//alert(event.clientX);
 			   	if (games[i].children.length===1){
@@ -84,18 +94,24 @@ var function_loop_mouse_enter = function(){
 		});
 	};
 };
+
+game_unordered_list.addEventListener('mouseleave', function(event){
+			   	for (var i = 0;i < games.length; i++) {
+		   			//alert(event.clientX);
+			   	if (games[i].children.length===1){
+			   		games[i].removeChild(games[i].children[0]);
+				   	
+				};
+   			};
+ });
 	
-	game_list_item[3].addEventListener('touchstart', function(event){ 
-		
+game_list_item[3].addEventListener('touchstart', function(event){ 		
 		start_swipe = event.touches[0].pageX;
 		start_swipe_y = event.touches[0].pageY;
-
-	});  
-	game_list_item[3].addEventListener('touchend', function(event){ 
-
+}); 
+game_list_item[3].addEventListener('touchend', function(event){
      		end_swipe = event.changedTouches[0].pageX;
      		end_swipe_y = event.changedTouches[0].pageY;
-
      		if (start_swipe_y < end_swipe_y){
      			if (end_swipe_y - start_swipe_y > y_threshold){
      				alert("crooked fingers");
@@ -109,10 +125,12 @@ var function_loop_mouse_enter = function(){
      			}
      		}       			
 			if (start_swipe + threshold< end_swipe ){
-				alert("swipe right");				
+				alert("swipe right");	
+				this.parentNode.remove(this);			
 			}
 			if (start_swipe > end_swipe + threshold){
 				alert('swipe left')
 			}
-		});
+});
+
 alert('crookedfingers1');

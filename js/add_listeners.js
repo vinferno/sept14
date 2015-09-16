@@ -46,4 +46,4 @@ game_unordered_list.addEventListener('mouseleave', function(){
 });
 
 
-add_mobile_event_listners('li');
+//add_mobile_event_listners('li');
